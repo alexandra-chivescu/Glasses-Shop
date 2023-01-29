@@ -1,0 +1,9 @@
+.custom-hr {
+    background: repeating-linear-gradient(0deg,
+            rgb(0, 0, 0) ,
+            rgb(255, 255, 255) 3px,
+            rgb(0, 0, 0) 3px,
+            rgb(255, 255, 255) 3px);
+    border-radius: 10px;
+    height: 10px;
+}

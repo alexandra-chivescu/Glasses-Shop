@@ -1,0 +1,35 @@
+.duotone {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-image: url(../images/men-glasses.jpg);
+    background-size: cover;
+  }
+  
+  .duotone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: pink;
+    mix-blend-mode: multiply;
+  }
+  
+  .duotone::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+    mix-blend-mode: screen;
+  }
+  
+  .duotone:hover {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+  }
+  

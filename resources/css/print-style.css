@@ -1,0 +1,146 @@
+@media print {
+
+    #banner {
+        position: absolute;
+        display: inline-block;
+        top: 100%;
+        width: 50%;
+        height: 1.5%; 
+        border: 5px double black;
+        right: 0;
+        overflow: visible;
+    }
+
+    #header {
+        margin-top: 50%;
+        text-align: center;
+        margin-left: 1cm;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+
+    #page-grid {
+        font-size: 10px;
+        box-sizing: border-box;
+        page-break-before: always;
+        background-color: white;
+        display: block;
+    }
+
+    #page-grid > * {
+        border: 1px solid rgb(64, 64, 64);
+    }
+
+    html,
+    body {
+        width: 210mm;
+        /* height: 297mm; */
+        /*height: 282mm;*/
+        overflow: visible !important;
+    }
+
+    #statistics {
+        page-break-before: always;
+    }
+
+
+    #watermark {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        color: rgba(0, 0, 0, 0.4);
+        right: 0;
+        margin: 10px;
+    }
+
+    #watermark::after {
+
+        opacity: 0.3;
+        padding: 5px;
+        margin: 10px;
+        display: block;
+        background: white;
+        border: 2px solid black;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        content: "Chivescu \ Alexandra";
+        width: 60%;
+        height: 10%;
+    }
+
+    .linkTop {
+        display: none;
+    }
+
+    .iframe-video {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .img_review_woman {
+        display: none;
+    }
+
+    .img_review_man {
+        display: none;
+    }
+
+    .img_review_kid {
+        display: none;
+    }
+
+    .bestseller_glasses {
+        display: none;
+    }
+
+    #instagram {
+        display: none; 
+    }
+
+    #facebook {
+        display: none; 
+    }
+
+    #youtube {
+        display: none; 
+    }
+
+    #whatsapp {
+        display: none; 
+    }
+
+    .linkTop {
+        display: none;
+    }
+}
+
+
+
+@page {
+    size: A4 portrait;
+    margin-bottom: 2cm;
+    margin-top: 2cm;
+    counter-increment: page;
+
+}
+
+@page: left {
+
+    margin-left: 2cm;
+    margin-right: 1cm;
+    border-radius: 20cm;
+}
+
+@page: right {
+
+    margin-right: 2cm;
+    margin-left: 1cm;
+}

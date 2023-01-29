@@ -1,0 +1,17 @@
+@media screen and (min-width:500px) and (max-width: 800px) {
+    
+#grid-galerie {
+    grid-template-columns: repeat(2,1fr);
+  }
+  #grid-galerie figure:nth-child(3n+1),
+  #grid-galerie figure:nth-child(3n+2) {
+  grid-column: 1, 2; 
+}
+
+#grid-galerie figure:nth-child(3n+3) {
+  grid-column: span 2; 
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+}

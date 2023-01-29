@@ -1,0 +1,39 @@
+{
+    "cale_baza": "resources\\images\\errors",
+    "eroare_default":{
+        "titlu":"Error !!!",
+        "text": "An error has occured.",
+        "image":"forbidden.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - Page not found.",
+            "text": "The page you are looking cannot be found on this server.",
+            "image":"forbidden.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 - Forbidden access",
+            "text": "Try without .ejs extension",
+            "image":"forbidden.png"
+        },
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Oops!",
+            "text": "Under construction",
+            "image":"forbidden.png"
+        },
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Database error",
+            "text": "Try again later",
+            "image":"forbidden.png"
+        }
+    ]
+}
+  

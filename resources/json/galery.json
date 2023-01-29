@@ -1,0 +1,84 @@
+{
+	"cale_galerie":"resources/images/galery",
+	"imagini": [
+		{
+			"fisier":"aviator_glasses1.png",
+			"descriere":"Aviator Glasses 1",
+			"timp" : "dimineata"
+		},
+		{
+			"fisier":"aviator_sunglasses1.png",
+			"descriere":"Aviator Sunglasses 1",
+			"timp" : "zi"
+			
+		},
+		{
+			"fisier":"browline_glasses1.png",
+			"descriere":"Browline Glasses 1",
+			"timp" : "zi"
+		},
+		{
+			"fisier":"cateye_glasses1.png",
+			"descriere":"Cat-eye Glasses 1",
+			"timp" : "zi"
+		},
+		{
+			"fisier":"cateye_glasses2.png",
+			"descriere":"Cat-eye Glasses 2",
+			"timp" : "zi"
+		},
+		{
+			"fisier":"geometric_glasses1.png",
+			"descriere":"Geometric Glasses 1",
+			"timp" : "dimineata"
+		},
+		{
+			"fisier":"half_rim_glasses1.png",
+			"timp" : "dimineata"
+		},
+		{
+			"fisier":"oval_glasses1.png",
+			"timp" : "dimineata"
+		},
+		{
+			"fisier":"rectangle_glasses1.png",
+			"descriere":"Rectangle Glasses 1",
+			"timp" : "dimineata"
+		},
+		{
+			"fisier":"rectangle_glasses2.png",
+			"descriere":"Rectangle Glasses 2",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"rimless_glasses1.png",
+			"descriere":"Rimless Glasses 1",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"round_glasses1.png",
+			"descriere":"Round Glasses 1",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"round_glasses2.png",
+			"descriere":"Round Glasses 2",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"round_sunglasses1.png",
+			"descriere":"Round Sunglasses 1",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"square_glasses1.png",
+			"descriere":"Square Glasses 1",
+			"timp" : "noapte"
+		},
+		{
+			"fisier":"cateye_glasses3.png",
+			"descriere":"Cateye Glasses 3",
+			"timp" : "dimineata"
+		}
+	]
+}
