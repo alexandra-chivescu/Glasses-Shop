@@ -13,13 +13,17 @@
     <meta name="msapplication-config" content="/resources/images/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script type="text/javascript" src="/resources/js/produse.js"></script>
     <%- include("../fragmente/head.ejs") %>
 </head>
+<body>
+    <%- include("../fragmente/header.ejs") %>
+
     <main>
         <label> Name: <input type="text" id="inp-nume"></label>
     
         <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="40"> <span id="infoRange">(0)</span></label>
-        <label>Select simplu:
+        <label>Selecteaza rama ochelarilor:
             <select id="inp-categorie">
                 <option id="sel-toate" selected value="toate">toate</option>
                 <% for (let opt of locals.optiuni) { %>
@@ -45,8 +49,8 @@
                         <div class="info-prod">
                             <p class="pret">Pret: <span class="val-pret"><%- prod.price%></span></p>
                             <p class="calorii">Brand: <span class="val-brand"><%- prod.brand%></span></p>
+                            <p class="categorie">Categorie rame:<span class="val-categorie"><%- prod.frame_type%></span></p>
                         </div>
-                        <p class="categorie">Categorie rame:<span class="val-categorie"><%- prod.frame_type%></span></p>
                         <figure>
                             <a href="/produs/<%-prod.id %>" ><img src="/resources/images/products/<%- prod.image %>" style="width:50%;height:auto;" alt="[imagine <%- prod.name %>]" /></a>
                         </figure>
@@ -59,7 +63,6 @@
             </div>
         </section>
     </main>
-
     <%- include("../fragmente/footer.ejs") %>
     </body>
 </html>

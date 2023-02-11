@@ -15,18 +15,21 @@
         <section>
             <h2>Pagină produs</h2>
                 <article id="art-produs">
-                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
-                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
-                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
-                    <p>Ingrediente: <span class="ingrediente"><%- locals.prod.ingrediente %> </span></p>
-                    <p>Calorii: <span class="calorii"><%- locals.prod.calorii %> </span></p>
-                    <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
-                    <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
-                    <p>Pentru diabetici: <span class="pt_diabetici"><%- locals.prod.pt_diabetici %> </span></p>
-                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+                    <div class="card">
+                    <h3><span class="nume"><%- locals.prod.name %></span></h3>
+                    <p>Pret: <span class="pret"><%- locals.prod.price %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.description %> </span></p>
+                    <p>Brand: <span class="ingrediente"><%- locals.prod.brand %> </span></p>
+                    <p>Culoare: <span class="calorii"><%- locals.prod.color %> </span></p>
+                    <p>Material: <span class="gramaj"><%- locals.prod.material %> </span></p>
+                    <p>Tip de ochelari: <span class="categorie"><%- locals.prod.product_type %> </span></p>
+                    <p>Tip rama: <span class="pt_diabetici"><%- locals.prod.frame_type %> </span></p>
+                    <p>Latime rama: <span class="categorie"><%- locals.prod.frame_width %> </span></p>
+                    <p>Data adăugare: <span class="categorie"><%- locals.prod.addition_date %> </span></p>
                     <figure class="imag-produs">
-                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
-                    </figure>    
+                        <img  src="/resources/images/products/<%- locals.prod.image %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>  
+                </div>  
                 </article>
             
         </section>

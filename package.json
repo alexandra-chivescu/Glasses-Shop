@@ -10,6 +10,7 @@
   "description": "",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "css": "^3.0.0",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "pg": "^8.9.0",
