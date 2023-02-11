@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description"
+        content="ZenGlass is a glasses shop specially designed for its customers with the option of online purchase and delivery by courier.">
+    <meta name="keywords" content="glasses, ZenGlass, eyeglasses, sunglasses, view, lenses, products">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ZenGlass</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/images/ico/apple-touch-icon.png">
+    <link rel="manifest" href="/resources/images/ico/site.webmanifest">
+    <link rel="mask-icon" href="/resources/images/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/resources/images/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%- include("../fragmente/head.ejs") %>
+</head>
+    <main>
+        <label> Name: <input type="text" id="inp-nume"></label>
+    
+        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="40"> <span id="infoRange">(0)</span></label>
+        <label>Select simplu:
+            <select id="inp-categorie">
+                <option id="sel-toate" selected value="toate">toate</option>
+                <% for (let opt of locals.optiuni) { %>
+                    <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
+                <% } %>
+            </select>
+        </label>
+        <p>
+        <button id="filtrare">Filtreaza</button> 
+        <button id="resetare">Reseteaza</button><br/>
+        <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
+        <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
+        
+        </p>
+        
+        <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+                    <article class="produs" >
+                        <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.name%></span></a></h3>
+                        <div class="info-prod">
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.price%></span></p>
+                            <p class="calorii">Brand: <span class="val-brand"><%- prod.brand%></span></p>
+                        </div>
+                        <p class="categorie">Categorie rame:<span class="val-categorie"><%- prod.frame_type%></span></p>
+                        <figure>
+                            <a href="/produs/<%-prod.id %>" ><img src="/resources/images/products/<%- prod.image %>" style="width:50%;height:auto;" alt="[imagine <%- prod.name %>]" /></a>
+                        </figure>
+                        <label class="selecteaza-cos">
+                            Selectează:<br/>
+                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                        </label>
+                    </article>
+                <% }%>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

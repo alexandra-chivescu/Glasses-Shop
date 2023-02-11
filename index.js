@@ -8,9 +8,23 @@ app.set("view engine", "ejs")
 app.use("/resources",express.static(__dirname+"/resources"));
 app.use("/node_modules",express.static(__dirname+"/node_modules"));
 
+const sass = require("sass");
+var cssBootstrap = sass.compile(__dirname+"/resources/scss/bootstrap-custom.scss", {sourceMap:true});
+fs.writeFileSync(__dirname+"/resources/css/libraries/bootstrap-custom.css", cssBootstrap.css);
+
+const {Client} = require("pg");
+var client = new Client({
+    database:"glasses_shop", 
+    user: "alexandra_glasses_shop_db",
+    password:"alexa2000",
+    host:"localhost",
+    port:5432 
+});
+client.connect();
+
 obGlobal = {
-    errors:null,
-    imagini:null
+    errors: null,
+    imagini: null
 }
 
 function createImages(){
@@ -71,6 +85,17 @@ function renderError(res, identificator, titlu, text, image) {
 
 app.get(["/","/index","/home"],function(req, res){
     res.render("pagini/index", {ip: req.ip, imagini:obGlobal.imagini});
+}); 
+
+app.get("/produse",function(req, res){
+    client.query("select * from glasses", function(err, rez) {
+        if(err) {
+            console.log(err);
+            renderError(res, 2);
+        }
+        else
+            res.render("pagini/produse", {produse:rez.rows, optiuni:[]});
+    });
 }); 
 
 app.get("/about_us",function(req, res){

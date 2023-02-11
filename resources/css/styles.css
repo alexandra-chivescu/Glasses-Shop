@@ -5,7 +5,7 @@ body{
     --background-color-secondary: #E8D6BE;
     --action-button-color: #2196F3;
     --button-color: black;
-    --border-color: #EDE1FA;
+    --border-color: #351b52;
 }
 
 @media only screen and (max-width: 400px) and (min-width: 0px) 
@@ -38,18 +38,6 @@ body {
 
 .img_promotion {
     width: 100%;
-}
-
-.column {
-    float: left;
-    width: 31.5%;
-    padding: 5px;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .img_review_woman {
@@ -295,8 +283,8 @@ td:nth-child(odd) {
     position:fixed;
     bottom: 10px;
     right:10px;
-    height:30px;
-    width:30px;
+    height:45px;
+    width:40px;
     opacity:0.5;
     float:left;
     font-size: 35px;
