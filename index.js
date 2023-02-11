@@ -89,16 +89,18 @@ app.get(["/","/index","/home"],function(req, res){
 
 app.get("/produse",function(req, res){
     client.query("select * from unnest(enum_range(null::frame_types))", function(err, rezCateg) {
+
         continuareQuery = ""
-        if(req.query.tip)
-            continuareQuery += ` and tip='${req.query.tip}'`
+
+        if(req.query.category)
+            continuareQuery += ` and category='${req.query.category}'`
         client.query("select * from glasses where 1=1"+ continuareQuery, function(err, rez) {
             if(err) {
                 console.log(err);
                 renderError(res, 2);
             }
             else
-            { console.log(rezCateg.rows);
+            {
                 res.render("pagini/produse", {produse:rez.rows, optiuni:rezCateg.rows});
             }
         });

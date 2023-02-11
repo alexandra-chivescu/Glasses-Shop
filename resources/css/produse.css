@@ -23,11 +23,8 @@ main{
     padding-bottom: 0.5rem;
 }
 
-.grid-produse .produs h3 a{
-    color:black;
-}
 .grid-produse .produs h3 a:hover{
-    color:white;
+    color:rgb(54, 117, 255);
 }
 .grid-produse .produs figure{
     text-align: center;

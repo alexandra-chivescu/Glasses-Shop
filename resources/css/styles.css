@@ -4,8 +4,33 @@ body{
     --background-color-main: white;
     --background-color-secondary: #E8D6BE;
     --action-button-color: #2196F3;
-    --button-color: black;
-    --border-color: #351b52;
+    --border-color: #af8dd6;
+}
+
+body.dark {
+    margin: 0;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    --background-color-main: rgb(0, 0, 0);
+    --background-color-header: rgb(0, 0, 0);
+    --background-color-secondary: #efc48d;
+    --action-button-color: #1178cd;
+    --button-color: rgb(255, 255, 255);
+    --table-color: white;
+    color: white;
+    --link-color: white;
+}
+
+table {
+    color: var(--table-color);
+}
+
+.menu {
+    background-color: var(--background-color-header);
+}
+
+.grid-produse .produs h3 a {
+    color: var(--link-color);
 }
 
 @media only screen and (max-width: 400px) and (min-width: 0px) 

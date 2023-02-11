@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
     document.getElementById("filtrare").onclick = function () {
 
         //verif inputuri
@@ -104,4 +104,4 @@ window.onload = function () {
             }
         }
     }
-}
+});

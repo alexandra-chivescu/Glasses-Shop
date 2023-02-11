@@ -41,13 +41,13 @@
                         <thead class="table-head">
                             <tr>
                                 <th></th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
                             </tr>
                         </thead>
                         <tbody class="table-body">
@@ -421,14 +421,14 @@
                 <section id="galerie-statica">
                     <h2>Galerie</h2>
                     <div id="grid-galerie">
-                        <% for (let imag of locals.imagini) { 
+                        <% for (let imag of locals.imagini) {
                             var currentDate = new Date(); 
                             var currentHour = currentDate.getHours();
                             var timp = ["dimineata","zi","noapte"]
                             if ((currentHour >= 5 && currentHour <= 12 && imag.timp == "dimineata") || 
                                 (currentHour >= 12 && currentHour <= 20 && imag.timp == "zi") || 
                                 (currentHour >= 20 && currentHour <= 24 && imag.timp == "noapte") ||
-                                (currentHour >= 1 && currentHour <= 5 && imag.timp == "noapte")) { %></24>
+                                (currentHour >= 1 && currentHour <= 5 && imag.timp == "noapte")) { %>
                             <figure>
                                 <picture>
                                     <source srcset="<%- imag.fisier_mediu %>" media="(max-width: 900px)">
@@ -437,15 +437,13 @@
                                 </picture>
                                 <figcaption><%- imag.descriere %></figcaption>
                             </figure>
-                            <% } 
-                        } %>
+                        <% } } %>
                     </div>
                 </section>
             </section>
     </main>
-
     <%- include("../fragmente/footer.ejs") %>
 
-    </body>
+</body>
 
 </html>
