@@ -382,3 +382,6 @@ td:hover {
     border: double;
 }
 
+#banner {
+    background-color: rgb(183, 222, 234);
+}
